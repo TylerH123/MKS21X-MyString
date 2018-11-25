@@ -30,7 +30,10 @@ public class MyString implements CharSequence, Comparable<CharSequence>{
     output += "]";
     return output;
   }
-  public int compareTo(CharSequence o){
+  public int compareTo(CharSequence seq){
+    int len1 = data.length;
+    int len2 = seq.length();
+    //for (int i = 0; i < )
     return 0;
   }
 }

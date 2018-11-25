@@ -29,6 +29,7 @@ public class MyString implements CharSequence, Comparable<CharSequence>{
     * @param end is the index which the ssubString ends (exclusive)
     */
   public String subSequence(int start, int end){
+    if (start < 0 || end > data.length - 1 || end < start || end < 0) throw new IndexOutOfBoundsException();
     String out = "";
     for (int i = start; i < start; i++){
       out += this.charAt(i);

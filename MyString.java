@@ -10,13 +10,24 @@ public class MyString implements CharSequence, Comparable<CharSequence>{
       data[i] = s.charAt(i);
     }
   }
+  /**
+    *returns the char at the given index
+    * @param index is the desired index
+    */
   public char charAt(int index){
     if (index < 0 || index > data.length - 1) throw new IndexOutOfBoundsException();
     return data[index];
   }
+  /**
+    * returns length of the MyString
+    */
   public int length(){
     return data.length;
   }
+  /** returns a subString of MyString
+    * @param start is the index which the subString starts (inclusive)
+    * @param end is the index which the ssubString ends (exclusive)
+    */
   public String subSequence(int start, int end){
     String out = "";
     for (int i = start; i < start; i++){

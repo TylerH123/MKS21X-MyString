@@ -11,24 +11,28 @@ public class MyString implements CharSequence, Comparable<CharSequence>{
     }
   }
   /**
-    *returns the char at the given index
+    * returns the char at the given index
     * @param index is the desired index
+    * @return char at given index
     */
   public char charAt(int index){
     if (index < 0 || index > data.length - 1) throw new IndexOutOfBoundsException();
     return data[index];
   }
   /**
-    * returns length of the MyString
+    * length of the MyString
+    * @return length of MyString
     */
   public int length(){
     return data.length;
   }
-  /** returns a subString of MyString
+  /**
+    * splices string at the given indexes and returns a subString
     * @param start is the index which the subString starts (inclusive)
     * @param end is the index which the ssubString ends (exclusive)
+    * @return subString of MyString starting at start and ending at end
     */
-  public String subSequence(int start, int end){
+  public CharSequence subSequence(int start, int end){
     if (start < 0 || end > data.length - 1 || end < start || end < 0) throw new IndexOutOfBoundsException();
     String out = "";
     for (int i = start; i < start; i++){
@@ -36,6 +40,10 @@ public class MyString implements CharSequence, Comparable<CharSequence>{
     }
     return out;
   }
+  /**
+    * MyString as a string
+    * @return MyString as a string 
+  */
   public String toString(){
     String output = "[";
     for (int i = 0; i < data.length; i++){
